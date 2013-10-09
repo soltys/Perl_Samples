@@ -1,3 +1,5 @@
+use warnings;
+use strict;
 #
 # Foreach nie zmienia wartości elementu wewnątrz pętli
 #

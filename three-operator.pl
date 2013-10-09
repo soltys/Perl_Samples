@@ -1,3 +1,5 @@
+use warnings;
+use strict;
 $ok = true;
 
 $a = 1;
