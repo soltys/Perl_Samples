@@ -2,6 +2,8 @@ use 5.012;
 use warnings;
 use POSIX;
 
+
+
 my $dir = ".";
 my $long_format = 0;
 
@@ -24,14 +26,16 @@ my @files = readdir($hdir) or die "Directory $dir cannot be read";
 
 foreach(@files){
     next if /^\./;
-    print;
-    print " ";
-    print -s; #size
-    print " ";
-    print POSIX::strftime("%Y-%m-%d %H:%M:%S", localtime( (stat )[9]));
-    print " ";
-    printf numToRWX(  ((stat)[2]) & 0777 );
-    print "\n";
+    my $name = $_;
+    my $size = ((stat)[7]);
+    my $date = POSIX::strftime("%Y-%m-%d %H:%M:%S", localtime( (stat )[9]));
+    my $perm =  numToRWX(  ((stat)[2]) & 0777 );
+    format STDOUT =
+@<<<<<<<< @#### @<<<<<<<<< @<<<<<<<<<<<<<<<<<<<
+$name,  $size,  $date,     $perm
+.
+    
+    write ;
 }
 
 
@@ -45,3 +49,4 @@ sub numToRWX{
     }
     return scalar reverse $out;
 }
+
