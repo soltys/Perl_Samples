@@ -2,23 +2,18 @@ use 5.012;
 use warnings;
 use POSIX;
 
-
-
 my $dir = ".";
 my $long_format = 0;
 
 die "Too many args" if scalar @ARGV>2;
 
 foreach (@ARGV){
-    if(/\-l/)
-    {
+    if(/^\-l/){
 	$long_format = 1;
 	next;
     }
-    
     $dir = $_;
 }
-
 
 my ($hdir);
 opendir($hdir, $dir) or die "Directory $dir cannot be opened";
@@ -34,10 +29,8 @@ foreach(@files){
 @<<<<<<<< @#### @<<<<<<<<< @<<<<<<<<<<<<<<<<<<<
 $name,  $size,  $date,     $perm
 .
-    
     write ;
 }
-
 
 sub numToRWX{
     my $num = shift;
