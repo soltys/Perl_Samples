@@ -22,9 +22,10 @@ my @files = readdir($hdir) or die "Directory $dir cannot be read";
 foreach(@files){
     next if /^\./;
     my $name = $_;
-    my $size = ((stat)[7]);
-    my $date = POSIX::strftime("%Y-%m-%d %H:%M:%S", localtime( (stat )[9]));
-    my $perm =  numToRWX(  ((stat)[2]) & 0777 );
+    my $full_name = $dir . "/" . $name;
+    my $size = ((stat $full_name)[7]);
+    my $date = POSIX::strftime("%Y-%m-%d %H:%M:%S", localtime( (stat $full_name )[9]));
+    my $perm =  numToRWX(  ((stat $full_name)[2]) & 0777 );
     format STDOUT =
 @<<<<<<<< @#### @<<<<<<<<< @<<<<<<<<<<<<<<<<<<<
 $name,  $size,  $date,     $perm
