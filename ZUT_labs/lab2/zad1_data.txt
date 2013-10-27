@@ -1,0 +1,5 @@
+pawel,soltys,5.0
+pawel,soltys,3.0
+pawel,soltys,1.0
+jan,kowalski,3.2
+bob,barkley,2
