@@ -20,6 +20,7 @@ while(<>){
 }
 
 foreach(sort {$a gt $b} keys %people){
-say $people{$_};
+    my($fname,$lname,$grade) = split(/,/ , $people{$_});
+    printf("$lname,$fname,%.1f\n",$grade);
 }
 
