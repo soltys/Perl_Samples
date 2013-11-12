@@ -6,11 +6,9 @@ while(<>){
 	chomp;
 
 	if(m/user \b(\w+)\b from (.*?) port (\d+)/)
-{
-
-	print "$1,$2,$3";
-}
-	print "\n";
+	{
+		print "$1,$2,$3\n";
+	}
 }
 
 

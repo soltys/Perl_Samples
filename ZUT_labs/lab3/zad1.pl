@@ -1,5 +1,6 @@
 #!/usr/bin/perl
-$good_emails = 0;
+use warnings;
+my $good_emails = 0;
 while(<>){
 chomp;
 
