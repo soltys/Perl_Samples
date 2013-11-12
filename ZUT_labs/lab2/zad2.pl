@@ -7,8 +7,8 @@ while(<>){
     chomp;
     my @data = split(/,/);
     if  (scalar(@data) == 3){
-    my($who,$ip,$port) = @data;
-    $log{$ip}++;
+    	my($who,$ip,$port) = @data;
+	$log{$ip}++;
     }
 }
 

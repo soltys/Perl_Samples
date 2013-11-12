@@ -1,0 +1,8 @@
+foobar aaa@blog.pl
+AE@example.com
+
+FW#!-@example.com
+
+foooooobar
+
+test@test.com
