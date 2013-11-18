@@ -1,7 +1,4 @@
-Perl_Samples
-============
+ZUT_PSL
+=======
 
-Small samples of code, which helps learning about quirks of Perl programming language
-
-
-ZUT_labs contains scripts used in laboratories 2013.
+This repository contains scripts used in laboratories 2013 during Programming Script Languages course on Faculty of Computer Science and Information Technology, West Pomeranian University of Technology.
